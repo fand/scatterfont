@@ -1,0 +1,48 @@
+@font-face {
+    font-family: droidsans;
+    src: url('http://font.gmork.in/droidsans') format('svg');
+}
+
+#droidsans{
+    font-family: droidsans;
+}
+
+body{
+    width: 960px;
+    margin: 0 auto;
+}
+section{
+    padding: 10px 0 20px 0;
+
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 30px 20px;
+}
+div{
+    padding: 15px 30px 25px 30px;
+}
+dt{
+    padding: 15px 50px;
+}
+
+/* Source Code CSS */
+pre.code {
+    font-size: 1.0em;
+    /* line-height:1.2em; */
+    border:1px solid #aaa;
+    background:#f0f0f0;
+    margin: 0 auto;
+    padding:20px;
+    overflow: auto;
+}
+pre.code span.tag{ color: #0000ff;}
+pre.code span.attr { color: #000; }
+pre.code span.value{ color: #900; }
+pre.code span.str { color: #009900; }
+pre.code span.num { color: #009900; }
+pre.code span.keyword{ color: #0000ff; }
+pre.code span.rem{ color: #909; }
+pre.code span.variable{ color: #500050;}
+
+
+
