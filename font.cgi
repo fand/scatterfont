@@ -17,7 +17,7 @@ else:
 with open("svg/" + fontname + ".svg", "r") as f:
     binary = f.read()
 
-# process    
+# process
 d = lxml.html.fromstring(binary)
 
 units = int(d.xpath("//font-face")[0].attrib["units-per-em"])
@@ -65,7 +65,7 @@ for g in g_list:
         if r % 3 != 0:
             for i in range(r % 11):
                 if r < 50:
-                    path += ("v " + str(random.randint(-units, units)) + 
+                    path += ("v " + str(random.randint(-units, units)) +
                              "h " + str(random.randint(-units, units)))
                 else:
                     path = ("v " + str(random.randint(-units, units)) +
@@ -73,15 +73,10 @@ for g in g_list:
                             path)
 
         g.attrib["d"] = path
-                    
+
 
 # output
 s = lxml.html.tostring(d)
-print "Content-type: application/image/svg+xml"
+print "Content-type: image/svg+xml"
 print ""
 print s.encode('utf_8')
-
-        
-
-    
-    
