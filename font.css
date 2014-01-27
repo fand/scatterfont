@@ -31,8 +31,8 @@ pre.code {
     /* line-height:1.2em; */
     border:1px solid #aaa;
     background:#f0f0f0;
-    margin: 0 auto;
-    padding:20px;
+    margin: 10 auto;
+    padding:15px;
     overflow: auto;
 }
 pre.code span.tag{ color: #0000ff;}

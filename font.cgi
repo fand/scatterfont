@@ -21,6 +21,7 @@ with open("svg/" + fontname + ".svg", "r") as f:
 d = lxml.html.fromstring(binary)
 
 units = int(d.xpath("//font-face")[0].attrib["units-per-em"])
+units_10 = units / 10
 g_list = d.xpath("//glyph")
 k_list = []
 k_tmp = []
@@ -31,6 +32,8 @@ for g in g_list:
 
         path = g.attrib["d"]
 
+        
+        # glitch vertex
         p_list = path.split("v")
         for i in range(1, len(p_list)):
             if random.random() < 0.3:
@@ -40,7 +43,24 @@ for g in g_list:
 
         path = "".join(p_list)
 
+        
+        # glitch curves
+        p_list = path.split("q")
+        for i in range(1, len(p_list)):
+            if random.random() < 0.3:
+                p_list[i] = ("q" +
+                             str(random.randint(-units_10, units_10)) + " " +
+                             str(random.randint(-units_10, units_10)) + " " +
+                             str(random.randint(-units_10, units_10)) + " " +
+                             str(random.randint(-units_10, units_10)) + " " +
+                             "q" + p_list[i])
+            else:
+                p_list[i] = "q" + p_list[i]
 
+        path = "".join(p_list)
+
+        
+        # add noises
         r = random.randint(0, 100)
         if r % 3 != 0:
             for i in range(r % 11):
