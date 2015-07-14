@@ -1,0 +1,20 @@
+@font-face {
+    font-family: droidsans;
+    src: url('http://font.gmork.in/droidsans') format('svg');
+}
+@font-face {
+    font-family: droidserif-regular;
+    src: url('http://font.gmork.in/droidserif-regular') format('svg');
+}
+
+#droidsans{
+    font-family: droidsans;
+}
+#droidserif{
+    font-family: droidserif-regular;
+}
+
+
+body{
+    width: 960px;
+}

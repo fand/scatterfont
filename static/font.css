@@ -1,6 +1,6 @@
 @font-face {
     font-family: droidsans;
-    src: url('http://font.gmork.in/droidsans') format('svg');
+    src: url('../droidsans.svg') format('svg');
 }
 
 #droidsans{
