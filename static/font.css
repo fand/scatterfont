@@ -1,10 +1,12 @@
 @font-face {
-    font-family: droidsans;
-    src: url('http://font.gmork.in/droidsans') format('svg');
+    font-family: 'droidsans';
+    font-style: normal;
+    font-weight: 100;
+    src: local('droidsans'), url(http://font.gmork.in/droidsans.svg) format('svg');
 }
 
-#droidsans{
-    font-family: droidsans;
+#droidsans {
+    font-family: 'droidsans';
 }
 
 

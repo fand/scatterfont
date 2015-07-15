@@ -1,0 +1,97 @@
+<!doctype html>
+<meta charset="utf-8">
+
+<head>
+    <title>Webンス</title>
+    <link rel="stylesheet" type="text/css" href="font.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+</head>
+
+<body>
+    <h1>Random Font Generator</h1>
+
+    <section>
+        <h2>Sample</h2>
+        <div id="normal">
+            'I won't indeed!' said Alice, in a great hurry to change the subject of conversation. 'Are you--are you fond--of--of dogs?' The Mouse did not answer, so Alice went on eagerly: 'There is such a nice little dog near our house I should like to show you!
+            A little bright-eyed terrier, you know, with oh, such long curly brown hair! And it'll fetch things when you throw them, and it'll sit up and beg for its dinner, and all sorts of things--I can't remember half of them--and it belongs to a farmer,
+            you know, and he says it's so useful, it's worth a hundred pounds! He says it kills all the rats and--oh dear!' cried Alice in a sorrowful tone, 'I'm afraid I've offended it again!' For the Mouse was swimming away from her as hard as it could
+            go, and making quite a commotion in the pool as it went.
+        </div>
+        <div id="droidsans">
+            'I won't indeed!' said Alice, in a great hurry to change the subject of conversation. 'Are you--are you fond--of--of dogs?' The Mouse did not answer, so Alice went on eagerly: 'There is such a nice little dog near our house I should like to show you!
+            A little bright-eyed terrier, you know, with oh, such long curly brown hair! And it'll fetch things when you throw them, and it'll sit up and beg for its dinner, and all sorts of things--I can't remember half of them--and it belongs to a farmer,
+            you know, and he says it's so useful, it's worth a hundred pounds! He says it kills all the rats and--oh dear!' cried Alice in a sorrowful tone, 'I'm afraid I've offended it again!' For the Mouse was swimming away from her as hard as it could
+            go, and making quite a commotion in the pool as it went.
+        </div>
+    </section>
+
+    <section>
+        <h2>How to Use</h2>
+        <div id="sourcecode">
+            Call "http://font.gmork.in/" + (font name) from CSS, like this:
+
+<pre class="code">
+@<span class="keyword">font-face</span> {
+    <span class="keyword">font-family</span>: <span class="keyword">droidsans</span>;
+    <span class="keyword">src</span>: <span class="keyword">url</span>(<span class="str">'http://font.gmork.in/droidsans'</span>) <span class="keyword">format</span>(<span class="str">'svg'</span>);
+}
+
+<span class="keyword">droidsans</span> {
+    <span class="keyword">font-family</span>: <span class="keyword">droidsans</span>;
+}
+</pre>
+
+            or just load CSS:
+
+<pre class="code">
+<span class="tag">&lt;link <span class="attr">rel=</span><span class="value">&quot;stylesheet&quot;</span> <span class="attr">type=</span><span class="value">&quot;text/css&quot;</span> <span class="attr">href=</span><span class="value">&quot;http://font.gmork.in/css/droidsans.css&quot;</span>&gt;</span>
+<span class="tag">&lt;p <span class="attr">style=</span><span class="value">&quot;font-family: droidsans;&quot;</span>&gt;</span>
+    Waltz, bad nymph, for quick jigs vex.
+<span class="tag">&lt;/p&gt;</span>
+</pre>
+
+        </div>
+    </section>
+
+    <section>
+        <h2>Available Fonts</h2>
+        <dl>
+            <dd><a href="http://www.fontsquirrel.com/fonts/Droid-Sans">Droid Sans</a>: Apache License v2.0</dd>
+            <dt>
+                droidsans droidsans-bold
+            </dt>
+            <dd><a href="http://www.fontsquirrel.com/fonts/Droid-Serif">Droid Serif</a>: Apache License v2.0</dd>
+            <dt>
+                droidserif-regular droidserif-bold droidserif-italic droidserif-bolditalic
+                <br>
+            </dt>
+            <dd><a href="http://www.fontsquirrel.com/fonts/open-sans">Open Sans</a>: Apache License v2.0</dd>
+            <dt>
+                opensans-regular opensans-light opensans-semibold opensans-bold opensans extrabold opensans-italic opensans-lightitalic opensans-semibolditalic opensans-bolditalic opensans_extrabolditalic
+                <br>
+            </dt>
+            <dd><a href="http://www.fontsquirrel.com/fonts/Quicksand">Quicksand</a>: SIL Open Font License</dd>
+            <dt>
+                quicksand_light quicksand_dash quicksand_book quicksand_bold quicksand_light_obliquie quicksand_book_oblique quicksand_bold_oblique
+            </dt>
+        </dl>
+    </section>
+
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-41787635-3', 'gmork.in');
+        ga('send', 'pageview');
+    </script>
+</body>
