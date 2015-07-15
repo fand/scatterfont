@@ -15,12 +15,15 @@ def scatterFont(fontname='droidsans')
 
     REXML::XPath.match(d, "//glyph").each do |g|
 
-        if g.has_attribute 'd'
-            path = g.attribute 'd'
+        path_attr = g.attribute('d')
+
+        if path_attr
+
+            path = path_attr.value
 
             # glitch vertex
             vs = path.split 'v'
-            vs = vs..map_with_index do |v, i|
+            vs = vs.map.with_index do |v, i|
                 next if i == 0
                 if rand < 0.3
                     v = "v" + v
@@ -32,7 +35,7 @@ def scatterFont(fontname='droidsans')
 
             # glitch curves
             cs = path.split 'q'
-            cs = cs.map_with_index do |c, i|
+            cs = cs.map.with_index do |c, i|
                 next if i == 0
                 if rand < 0.3
                     c = (
@@ -65,7 +68,7 @@ def scatterFont(fontname='droidsans')
                 end
             end
 
-            g.set_attribute('d', path)
+            g.add_attribute('d', path)
 
         end
 
@@ -73,6 +76,9 @@ def scatterFont(fontname='droidsans')
 
     # output
     s = d.to_s
+
+    p s
+    p '>>>>>>>>'
 
     # with codecs.open("./scattered.svg", "wb") as f:
     #     f.write(s)
